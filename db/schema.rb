@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140901000129) do
+ActiveRecord::Schema.define(version: 20140901175309) do
 
   create_table "books", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "filename"
   end
 
   add_index "books", ["slug"], name: "index_books_on_slug", unique: true
