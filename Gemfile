@@ -41,8 +41,14 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
-gem 'better_errors', '~> 2.0.0', group: :development
+group :development do
+  gem 'better_errors', '~> 2.0.0'
+  gem 'binding_of_caller', '~> 0.7.2'
+end
+
 gem 'friendly_id', '~> 5.0.4'
 
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
+
+gem 'carrierwave', '~> 0.10.0'

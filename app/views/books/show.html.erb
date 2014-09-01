@@ -5,7 +5,7 @@
   <%= @book.name %>
 
   <strong>Cover:</strong>
-  <%= image_tag "books/#{@book.id}/cover/#{@book.filename}" %>
+  <%= image_tag @book.cover.url %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
