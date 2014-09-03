@@ -44,6 +44,7 @@ gem 'autoprefixer-rails'
 group :development do
   gem 'better_errors', '~> 2.0.0'
   gem 'binding_of_caller', '~> 0.7.2'
+  gem 'annotate', '~> 2.6.5'
 end
 
 gem 'friendly_id', '~> 5.0.4'
