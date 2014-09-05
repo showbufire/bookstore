@@ -55,3 +55,4 @@ gem 'will_paginate-bootstrap', '~> 1.0.1'
 gem 'carrierwave', '~> 0.10.0'
 
 gem 'devise', '~> 3.3.0'
+gem 'font-awesome-sass', '~> 4.2.0'

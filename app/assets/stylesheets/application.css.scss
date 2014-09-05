@@ -1,6 +1,4 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
-body td {
-  padding: 5px;
-}
+@import "font-awesome-sprockets";
+@import "font-awesome";

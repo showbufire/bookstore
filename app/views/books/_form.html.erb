@@ -20,7 +20,7 @@
     <%= f.file_field :cover %>
   </div>
   <div class="form-group">
-    <%= f.button "Submit", class: "btn btn-success btn-lg btn-block" %>
+    <%= f.button "Submit", class: "btn btn-success btn-lg btn-block", data: { disable_with: "<i class='fa fa-spinner fa-spin'></i> Submitting..."} %>
   </div>
 <% end %>
 
