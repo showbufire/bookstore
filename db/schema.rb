@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903044057) do
+ActiveRecord::Schema.define(version: 20140906191218) do
 
   create_table "books", force: true do |t|
     t.string   "name"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140903044057) do
     t.string   "cover"
     t.integer  "creator_id"
     t.string   "desc"
+    t.datetime "published_at"
   end
 
   add_index "books", ["slug"], name: "index_books_on_slug", unique: true

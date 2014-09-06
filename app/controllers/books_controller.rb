@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy, :publish]
   before_action :authenticate_user!, except: [:show, :index]
 
   # GET /books
@@ -59,8 +59,12 @@ class BooksController < ApplicationController
     @book.destroy
     respond_to do |format|
       format.html { redirect_to books_url, notice: 'Book was successfully destroyed.' }
-      format.json { head :no_content }
+      format.json {d head :no_content }
     end
+  end
+
+  def publish
+    @book.update(published_at: Time.zone.now)
   end
 
   private
@@ -71,6 +75,7 @@ class BooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def book_params
-      params.require(:book).permit(:name, :cover, :desc, :creator_id)
+      params.require(:book).permit(:name, :cover, :desc,
+                                   :creator_id, :published_at)
     end
 end

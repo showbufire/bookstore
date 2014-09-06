@@ -14,13 +14,20 @@
       </div>
 
       <div>
+	<strong>Published at:</strong>
+	<span id="published_at"> <%= @book.published_at %> </span>
+      </div>
+
+      <div>
 	<strong>Cover:</strong>
 	<%= image_tag @book.cover.url %>
       </div>
 
+      <%= link_to 'Publish', publish_book_path(@book), method: :patch, remote: true, data: {disable_with: "publishing..."} %> |
       <%= link_to 'Edit', edit_book_path(@book) %> |
       <%= link_to 'Back', books_path %>
 
     </div>
   </div>
+
 </div>
