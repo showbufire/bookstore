@@ -1,12 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-2">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @book.name %>
+      <div>
+	<strong>Name:</strong>
+	<%= @book.name %>
+      </div>
 
-  <strong>Cover:</strong>
-  <%= image_tag @book.cover.url %>
-</p>
+      <div>
+	<strong>Description:</strong>
+	<%= @book.desc %>
+      </div>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+      <div>
+	<strong>Cover:</strong>
+	<%= image_tag @book.cover.url %>
+      </div>
+
+      <%= link_to 'Edit', edit_book_path(@book) %> |
+      <%= link_to 'Back', books_path %>
+
+    </div>
+  </div>
+</div>
