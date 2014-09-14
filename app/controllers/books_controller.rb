@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy, :publish]
-  before_action :authenticate_user!, except: [:index]
+
+  authorize_resource
 
   # GET /books
   # GET /books.json
@@ -68,7 +69,6 @@ class BooksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_book
       @book = Book.friendly.find(params[:id])
     end
